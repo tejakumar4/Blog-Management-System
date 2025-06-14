@@ -1,8 +1,5 @@
 ### Create your own Blogging Website
-<br />
-<p align="center">
-    <img src="static/hompage.png" alt="homepage" >
-</p>
+
 
 ## Features
 * Adim page to manage the blogs i.e add/edit/delete blog posts on the website.
