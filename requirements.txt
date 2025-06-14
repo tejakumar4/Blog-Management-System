@@ -1,0 +1,4 @@
+flask
+flask_mail
+flask_sqlalchemy
+pymysql

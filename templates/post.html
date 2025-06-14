@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block body %}
+{% set fname = "img/"+post.img_file %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{url_for('static',filename=fname)}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>{{post['title']}}</h1>
+            <h2 class="subheading">{{post.sub_heading}}</h2>
+            <span class="meta">Posted by
+              <a href="/about">{{params['blogger_name']}}</a>
+              on {{post.date}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+         {{post['content']}}
+        </div>
+      </div>
+    </div>
+  </article>
+  
+  <center>
+    <h3>Comments ({{ comments|length }})</h3>
+ <form method="POST">
+     <input type="text" name="name" placeholder="Your Name" required><br>
+     <input type="email" name="email" placeholder="Your Email" required><br>
+     <textarea name="comment" placeholder="Your Comment" required></textarea><br>
+     <button type="submit" name="comment">Post Comment</button>
+ </form>
+ 
+ <ul>
+     {% for c in comments %}
+     <li><strong>{{ c.name }}</strong> ({{ c.date.strftime('%Y-%m-%d') }}): {{ c.comment }}</li>
+     {% endfor %}
+ </ul>
+ 
+ <h3>Likes: {{ like_count }}</h3>
+ <form method="POST">
+     <button type="submit" name="like">Like 👍</button>
+ </form>
+ 
+  </center>
+ 
+ {% endblock %}
+
+ 

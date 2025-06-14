@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <a href="/">Back to Home</a>
+
+        <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Chat with AI (Llama API)</h2>
+        <form method="POST" class="flex flex-col space-y-4">
+            <textarea 
+                name="prompt" 
+                placeholder="Enter your message here..." 
+                required 
+                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+                rows="5"
+            ></textarea>
+            <button 
+                type="submit" 
+                class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300"
+            >
+                Send
+            </button>
+        </form>
+
+        {% if output %}
+            <div class="mt-6">
+                <h3 class="text-xl font-semibold text-gray-700">Response:</h3>
+                <p class="mt-2 text-gray-600">{{ output }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

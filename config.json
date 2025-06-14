@@ -1,0 +1,24 @@
+{
+    "params":
+    {
+        "local_server":"True",
+        "local_uri":"mysql+pymysql://root:123456789@localhost/blogs_details",
+        "prod_uri": "mysql+pymysql://root:@123456789localhost/blogs_details",
+        "fb_url": "https://www.facebook.com",
+        "tw_url": "https://www.twitter.com",
+        "git_url": "https://www.github.com",
+        "blogger_name":"Blogging",
+        "blog_heading":"Blogs",
+        "sub_heading":"",
+        "gmail_user":"tejakumar73423@gmail.com",
+        "gmail_password":"blla fosi uszc buhc",
+        "about_text":"you are going to love my blogs. Please share with your friends :)",
+        "no_of_posts": 2,
+        "login_image":"loginlogo.svg",
+        "admin_user":"pandey",
+        "admin_password":"pandey1995",
+        "upload_location":"static"
+    
+    }
+
+}
